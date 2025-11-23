@@ -9,6 +9,14 @@ const button2 = document.createElement("button");
 const h41 = document.getElementById("h41");
 const h42 = document.getElementById("h42");
 let i = 0;
+const questionListFuite = [1, 7, 15, 16, 17, 25, 26, 35, 36, 37, 50, 51, 52, 59, 60];
+const questionListAgressive = [4, 6, 10, 11, 20, 21, 28, 29, 30, 39, 40, 48, 49, 55, 56];
+const questionListManipulation = [3, 5, 9, 12, 13, 19, 22, 31, 32, 41, 42, 46, 47, 54, 57];
+const questionListAssertive = [2, 8, 14, 18, 23, 24, 27, 33, 34, 38, 43, 44, 45, 53, 58];
+let fuite = 0;
+let agressive = 0;
+let manipulation = 0;
+let assertive = 0;
 
 const informations = [
     {h1: "TESTEZ VOTRE ASSERTIVITÉ", h2: "", p: "", h3: "", button1: "", button2: "", h41: "", h42:"",},
@@ -72,7 +80,8 @@ const informations = [
     {h1: "QUESTION 57", h2: "", p: "Manipuler les autres est souvent le seul moyen pratique pour obtenir ce que l’on veut", h3: "", button1: "PLUTÔT FAUX", button2: "PLUTÔT VRAI", h41: ""},
     {h1: "QUESTION 58", h2: "", p: "Je sais en général protester avec efficacité, sans agressivité excessive", h3: "", button1: "PLUTÔT FAUX", button2: "PLUTÔT VRAI", h41: ""},
     {h1: "QUESTION 59", h2: "", p: "Je trouve que les problèmes ne peuvent être vraiment résolus sans en chercher les causes profondes", h3: "", button1: "PLUTÔT FAUX", button2: "PLUTÔT VRAI", h41: ""},
-    {h1: "QUESTION 60", h2: "", p: "Je n’aime pas me faire mal voir", h3: "", button1: "PLUTÔT FAUX", button2: "PLUTÔT VRAI", h41: ""}
+    {h1: "QUESTION 60", h2: "", p: "Je n’aime pas me faire mal voir", h3: "", button1: "PLUTÔT FAUX", button2: "PLUTÔT VRAI", h41: ""},
+    {} 
 ];
 
 h1.textContent = informations[i].h1;
@@ -153,4 +162,74 @@ leftButton.addEventListener("click", function(event) {
         button1.style.display = "none";
         button2.style.display = "none";
     }
+
+    if (i >= 2) {
+        button1.style.display = "flex";
+        button2.style.display = "flex";
+    }
+});
+
+///////////////////
+////BUTTON TRUE////
+///////////////////
+
+button2.addEventListener("click", function(event) {
+    if (i < informations.length - 1) {
+    i = i+1;
+        h1.textContent = informations[i].h1;
+        h2.textContent = informations[i].h2;
+        p.textContent = informations[i].p;
+        h3.textContent = informations[i].h3;
+        button1.textContent = informations[i].button1;
+        button2.textContent = informations[i].button2;
+        h41.textContent = informations[i].h41
+        if (questionListFuite.includes(i-2) === true) {
+            fuite = fuite + 1;
+            console.log(fuite + " Fuite");
+        } else if (questionListAgressive.includes(i-2) === true) {
+            agressive = agressive + 1;
+            console.log(agressive + " Agressive");
+        } else if (questionListManipulation.includes(i-2) === true) {
+            manipulation = manipulation + 1;
+            console.log(manipulation + " Manupulation");
+        } else if (questionListAssertive.includes(i-2) === true) {
+            assertive = assertive + 1;
+            console.log(assertive + " Assertive");
+        } else {
+            console.log("Error");
+        };
+    };
+});
+
+
+//////////////////////
+/////BUTTON FALSE/////
+//////////////////////
+
+button1.addEventListener("click", function(event) {
+    if (i < informations.length - 1) {
+    i = i+1;
+        h1.textContent = informations[i].h1;
+        h2.textContent = informations[i].h2;
+        p.textContent = informations[i].p;
+        h3.textContent = informations[i].h3;
+        button1.textContent = informations[i].button1;
+        button2.textContent = informations[i].button2;
+        h41.textContent = informations[i].h41
+        if (questionListFuite.includes(i-2) === true) {
+            fuite = fuite + 0;
+            console.log(fuite + " Fuite");
+        } else if (questionListAgressive.includes(i-2) === true) {
+            agressive = agressive + 0;
+            console.log(agressive + " Agressive");
+        } else if (questionListManipulation.includes(i-2) === true) {
+            manipulation = manipulation + 0;
+            console.log(manipulation + " Manupulation");
+        } else if (questionListAssertive.includes(i-2) === true) {
+            assertive = assertive + 0;
+            console.log(assertive + " Assertive");
+        } else {
+            console.log("Error");
+        };
+    };
 });
