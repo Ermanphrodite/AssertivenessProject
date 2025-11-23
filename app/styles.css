@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#h1, #h2, #p, #h3, #h41, #h42 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#leftButton {
+    position: absolute;
+    left: 5%;
+}
+
+#rightButton {
+    position: absolute;
+    right: 5%;
+}
+
+#h1 {
+    position: absolute;
+    top: 20%;
+}
+
+#h2 {
+    position: absolute;
+    top: 35%;
+}
+
+#p {
+    position: absolute;
+    width: 42%
+}
+
+#buttonTrue {
+    position: absolute;
+    bottom: 35%;
+    right: 25%;
+}
+
+#buttonFalse {
+    position: absolute;
+    bottom: 35%;
+    left: 25%;
+}
+
+#h3 {
+    position: absolute;
+    bottom: 35%;
+}
+
+#h41 {
+    position: absolute;
+    bottom: 20%;
+}
+
+#h42 {
+    position: absolute;
+    bottom: 15%;
+}
+

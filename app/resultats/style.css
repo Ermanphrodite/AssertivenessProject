@@ -1,0 +1,4 @@
+#btnPassif, #btnAgressif, #btnManipulateur, #btnAssertif {
+    position: absolute;
+    display: flex;
+}
