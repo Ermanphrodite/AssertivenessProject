@@ -1,5 +1,7 @@
 # AssertivenessProject : Auto-diagnostic d'Assertivité (🛠️en developpement🛠️)
 
+Lien vers le projet : [Assertiveness Project](https://vincentlesniak.github.io/AssertivenessProject/app/)
+
 **AssertivenessProject** est une application web interactive permettant d'évaluer son niveau d'assertivité à travers un test d'auto-diagnostic de 60 questions. 
 
 Ce projet a pour vocation d'aider les utilisateurs à identifier leur style de communication dominant (assertif, passif, agressif ou manipulateur) afin d'améliorer leur aisance relationnelle et leur efficacité collective.
