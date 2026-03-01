@@ -21,3 +21,4 @@ Ce projet a pour vocation d'aider les utilisateurs à identifier leur style de c
 
 * **Frontend :** HTML5, JavaScript (Vanilla) (Make it work pour le moment)
 * **Structure des données :** Les questions et la structure du test sont gérées via un tableau d'objets JavaScript pour faciliter la maintenance et les éventuelles traductions.
+<img width="2369" height="1740" alt="image" src="https://github.com/user-attachments/assets/d6d47a26-79ba-44d0-92ec-1c61dc28c0db" />
